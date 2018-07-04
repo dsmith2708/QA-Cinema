@@ -15,19 +15,19 @@
   <tr>
 
   <tr>
-    <th> New Message </th>
+    <th (click)="this.addingMessage()"> New Message </th>
   </tr>
 
-  <tr>
+  <tr [hidden]="!addMessageState">
     <th> Enter User Name </th>
     <th>  </th>
     <th> Enter Message</th>
   </tr>
 
-  <tr>
+  <tr [hidden]="!addMessageState">
     <th> <input type="text" [(ngModel)]="this.newMessage.userName" /> </th>
     <th> {{today | date}} </th>
     <th> <input type="text" [(ngModel)]="this.newMessage.messageText" /> </th>
   </tr>
 </table>
-<button (click)="this.saveMessage()"> Save Message </button>
+<button [hidden]="!addMessageState" (click)="this.saveMessage()"> Save Message </button>

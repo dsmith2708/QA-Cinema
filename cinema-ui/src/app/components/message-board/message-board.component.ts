@@ -11,6 +11,7 @@ export class MessageBoardComponent implements OnInit {
   messages: Array<any>;
   newMessage: {[k: string]: any} = {};
   today: any;
+  addMessageState: boolean = false;
 
   constructor(private messageService: MessageService) { }
 
@@ -19,14 +20,25 @@ export class MessageBoardComponent implements OnInit {
       this.messages = data;
     });
     this.today = Date.now();
-    console.log("just today " this.today);
-    //console.log("attempted pipe " this.today | date);
+    //console.log("just today " this.today);
   }
 
+  addingMessage() {
+    this.addMessageState = !this.addMessageState;
+  }
 
   saveMessage() {
-    this.newMessage.postTime = "2018-04-04";
-    this.messageService.postMessage(this.newMessage).subscribe();
-    console.log(this.newMessage.userName);
+    if (this.newMessage.userName == null) {
+      window.alert("You must enter a name to post a message");
+    }
+    else if (this.newMessage.messageText == null) {
+      window.alert("You do realise that you have not entered a message right?");
+    }
+    else {
+      this.newMessage.postTime = "0001-01-01";
+      this.messageService.postMessage(this.newMessage).subscribe();
+      location.reload();
+    }
+
   }
 }
