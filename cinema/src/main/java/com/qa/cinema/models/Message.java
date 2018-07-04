@@ -1,6 +1,5 @@
 package com.qa.cinema.models;
 
-import java.sql.Date;
 import java.time.LocalDate;
 
 import javax.persistence.Column;
