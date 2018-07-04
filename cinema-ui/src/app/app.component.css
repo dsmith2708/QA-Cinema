@@ -68,7 +68,7 @@ ul {
 }
 
 li {
-  background-color: #6cf;
+  background-color: #white;
 }
 
 a {
@@ -87,4 +87,13 @@ a:hover {
 #listSearch{
   position: absolute;
   right: 5%;
+}
+
+.dropdown-item {
+  background-color: white;
+}
+
+#dropdown-basic {
+  background-color: white;
+  width:auto;
 }

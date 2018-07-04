@@ -42,8 +42,8 @@
 
  <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
      role="menu" aria-labelledby="button-basic">
-   <div *ngFor="let film of films | LockFilter: query">
-   <li role="menuitem"><a (click)="myFunction()" [routerLink]="['/film-details']" class="dropdown-item">{{film.title}}</a></li>
+   <div *ngFor="let film of films | LockFilter: query" >
+   <li role="menuitem"><a [routerLink]="['/listings-gallery']" class="dropdown-item">{{film.title}}</a></li>
  </div>
 
  </ul>

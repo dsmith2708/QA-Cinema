@@ -26,9 +26,7 @@ export class AppComponent implements OnInit  {
 
     }
 
-    function myFunction(){
-      console.log("Testing");
-    }
+
 
 
 
