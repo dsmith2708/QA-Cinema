@@ -79,3 +79,12 @@ a {
 a:hover {
   font-weight: bold;
 }
+
+#searchBar {
+  position: absolute;
+  right: 1%;
+}
+#listSearch{
+  position: absolute;
+  right: 5%;
+}

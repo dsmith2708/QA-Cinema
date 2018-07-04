@@ -1,9 +1,61 @@
+
+
+
 <div class="Site">
 
 
 <mat-toolbar>
   <mat-toolbar-row id="header">
   <a [routerLink]="['/home']"><h1 style="font-size:2.5em"> QA Cinemas</h1></a>
+  <!-- <<span id="searchBar">
+    <input id ="searchText" type="text" placeholder="Search.." name="search" >
+    <button id ="searchBtn" type="submit"><i class="fa fa-search" ></i></button>
+  </span> -->
+   <!-- <span id="listSearch">
+    <input type="text"  class="form-control" placeholder="Search" [(ngModel)]="query" >
+    <div class="btn-group" dropdown>
+  <button id="button-basic" dropdownToggle type="button" class="btn btn-primary dropdown-toggle"
+          aria-controls="dropdown-basic" >
+    Search results <span class="caret"></span>
+  </button>
+
+  <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
+      role="menu" aria-labelledby="button-basic">
+    <div *ngFor="let film of films | LockFilter: query">
+    <li role="menuitem"><a (click)="myFunction()" [routerLink]="['/film-details']" class="dropdown-item">{{film.title}}</a></li>
+  </div>
+
+  </ul>
+</div>
+
+
+  </span> -->
+
+  <span id="listSearch">
+
+   <div class="btn-group" dropdown>
+
+ <input id="button-basic" dropdownToggle type="text" class="btn btn-Dark dropdown-toggle"
+         aria-controls="dropdown-basic" placeholder="Search..." [(ngModel)]="query">
+
+
+
+ <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
+     role="menu" aria-labelledby="button-basic">
+   <div *ngFor="let film of films | LockFilter: query">
+   <li role="menuitem"><a (click)="myFunction()" [routerLink]="['/film-details']" class="dropdown-item">{{film.title}}</a></li>
+ </div>
+
+ </ul>
+</div>
+
+
+ </span>
+
+
+
+
+
   </mat-toolbar-row>
   <mat-toolbar-row>
     <mat-card-content>

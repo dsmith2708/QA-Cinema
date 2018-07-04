@@ -32,6 +32,9 @@ import { ClassificationServiceService } from './services/classification/classifi
 import { ScreenService } from './services/screen/screen.service';
 import { FilmService } from './services/film/film.service';
 import { ContactrequestService } from './services/contactrequest/contactrequest.service';
+import { FilmDetailsComponent } from './components/film-details/film-details.component';
+import { SearchPipe } from './search.pipe';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -80,6 +83,10 @@ const appRoutes: Routes = [
     component: LocationComponent
   },
   {
+    path: 'film-details',
+    component: FilmDetailsComponent
+  },
+  {
     path: 'about-us',
     component: AboutUsComponent
   }
@@ -99,7 +106,9 @@ const appRoutes: Routes = [
     MessageBoardComponent,
     LocalVenuesComponent,
     LocationComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    FilmDetailsComponent,
+    SearchPipe
   ],
   imports: [
     FormsModule,
@@ -125,6 +134,7 @@ const appRoutes: Routes = [
     TooltipModule.forRoot(),
     CommonModule,
     FormsModule,
+    BsDropdownModule.forRoot(),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyAUP0P4drusAvNQMTErID0DhP9xxHSjV68'})
   ],

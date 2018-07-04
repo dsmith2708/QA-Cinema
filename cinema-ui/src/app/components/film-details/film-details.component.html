@@ -1,0 +1,20 @@
+<h2>Film Details</h2>
+
+<div id="pageContent">
+  <div class="filmPoster" >
+   <img src="{{films.poster}}" />
+   <div>
+     <p>{{films.title}}</p>
+   </div>
+   <div class="showings">
+     <div class="showing" *ngFor="let showing of this.showings" >
+
+       <div *ngIf="showing.film.id == film.id">
+         {{showing.date}}
+        <br />
+          {{showing.time}}
+       </div>
+     </div>
+   </div>
+  </div>
+</div>
