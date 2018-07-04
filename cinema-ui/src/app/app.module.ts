@@ -34,6 +34,10 @@ import { FilmService } from './services/film/film.service';
 import { ContactrequestService } from './services/contactrequest/contactrequest.service';
 import { MessageService } from './services/message/message.service';
 
+
+
+
+
 const appRoutes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
   {
