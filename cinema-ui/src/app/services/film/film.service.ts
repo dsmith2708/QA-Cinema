@@ -32,7 +32,7 @@ export class FilmService {
     return this.http.get(this.getGetFutureFilmsUrl());
   }
   getFilm(filmId:Number): Observable<any> {
-    return this.http.get(this.getFilmUrl() + filmId);
+    return this.http.get(this.getFilmUrl(filmId) + filmId);
   }
 
 

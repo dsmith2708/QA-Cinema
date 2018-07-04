@@ -19,7 +19,7 @@ export class AppComponent implements OnInit  {
      constructor(private filmService: FilmService ) { }
 
     ngOnInit(){
-        this.filmService.getAllFilms().subscribe(data => {
+        this.filmService.getCurrentFilms().subscribe(data => {
         this.films = data;
         console.log(data);
       });
