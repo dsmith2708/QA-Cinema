@@ -52,10 +52,6 @@
 
  </span>
 
-
-
-
-
   </mat-toolbar-row>
   <mat-toolbar-row>
     <mat-card-content>
@@ -71,10 +67,6 @@
           <span>Future Releases</span>
         </button>
       </mat-menu>
-    </mat-card-content>
-
-    <mat-card-content>
-      <button mat-button [routerLink]="['/booking']"><i class="fas fa-ticket-alt"></i>Booking</button>
     </mat-card-content>
 
     <mat-card-content>
@@ -97,6 +89,10 @@
 
     <mat-card-content>
       <button mat-button [routerLink]="['/contact']"><i class="fas fa-address-book"></i>Contact</button>
+    </mat-card-content>
+
+    <mat-card-content>
+      <button mat-button onclick="window.location.href = 'http://localhost:3000'"><i class="fas fa-comments"></i>Live Chat</button>
     </mat-card-content>
 
   </mat-toolbar-row>

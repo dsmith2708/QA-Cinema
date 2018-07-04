@@ -35,6 +35,8 @@ import { ContactrequestService } from './services/contactrequest/contactrequest.
 import { FilmDetailsComponent } from './components/film-details/film-details.component';
 import { SearchPipe } from './search.pipe';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { MessageService } from './services/message/message.service';
+
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
