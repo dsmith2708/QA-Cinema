@@ -3,31 +3,33 @@
 <table border="1">
 
   <tr>
-  <th> User </th>
-  <th> Posted on </th>
-  <th> </th>
+  <th class="username"> User </th>
+  <th class="postDate"> Posted on </th>
+  <th class="messageText"> </th>
   </tr>
 
   <tr *ngFor="let messages of this.messages">
-    <th> {{messages.userName}} </th>
-    <th> {{messages.postTime}} </th>
-    <th> {{messages.messageText}} </th>
+    <td class="username"> {{messages.userName}} </td>
+    <td class="postDate"> {{messages.postTime}} </td>
+    <td class="messageText"> {{messages.messageText}} </td>
   <tr>
 
   <tr>
-    <th (click)="this.addingMessage()"> New Message </th>
+    <td class="newMessageBtn" (click)="this.addingMessage()">Add New Message </td>
   </tr>
 
   <tr [hidden]="!addMessageState">
-    <th> Enter User Name </th>
-    <th>  </th>
-    <th> Enter Message</th>
+    <th class="username"> Enter User Name </th>
+    <th class="postDate">  </th>
+    <th class="messageText"> Enter Message</th>
   </tr>
 
   <tr [hidden]="!addMessageState">
-    <th> <input type="text" [(ngModel)]="this.newMessage.userName" /> </th>
-    <th> {{today | date}} </th>
-    <th> <input type="text" [(ngModel)]="this.newMessage.messageText" /> </th>
+    <td class="username"> <input type="text" [(ngModel)]="this.newMessage.userName" /> </td>
+    <td class="postDate"> {{today | date}} </td>
+    <td class="messageText"> <input type="text" [(ngModel)]="this.newMessage.messageText" /> </td>
   </tr>
 </table>
-<button [hidden]="!addMessageState" (click)="this.saveMessage()"> Save Message </button>
+<span [hidden]="!addMessageState">
+  <button id="saveMsgBtn" class="btn btn-primary" [hidden]="!addMessageState" (click)="this.saveMessage()"> Save Message </button>
+</span>
