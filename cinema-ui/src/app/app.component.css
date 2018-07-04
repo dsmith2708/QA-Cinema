@@ -68,7 +68,7 @@ ul {
 }
 
 li {
-  background-color: #6cf;
+  background-color: #white;
 }
 
 a {
@@ -78,4 +78,22 @@ a {
 }
 a:hover {
   font-weight: bold;
+}
+
+#searchBar {
+  position: absolute;
+  right: 1%;
+}
+#listSearch{
+  position: absolute;
+  right: 5%;
+}
+
+.dropdown-item {
+  background-color: white;
+}
+
+#dropdown-basic {
+  background-color: white;
+  width:auto;
 }

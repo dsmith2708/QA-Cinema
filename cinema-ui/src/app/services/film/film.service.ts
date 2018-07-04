@@ -20,6 +20,9 @@ export class FilmService {
   getGetAllShowingsUrl() {
     return "//localhost:4200/server/showings"
   }
+  getFilmUrl(filmId:Number){
+    return "//localhost:4200/server/films/";
+  }
 
   getCurrentFilms(): Observable<any> {
     return this.http.get(this.getGetCurrentFilmsUrl());
@@ -28,6 +31,10 @@ export class FilmService {
   getFutureFilms() : Observable<any> {
     return this.http.get(this.getGetFutureFilmsUrl());
   }
+  getFilm(filmId:Number): Observable<any> {
+    return this.http.get(this.getFilmUrl() + filmId);
+  }
+
 
   getAllShowings(): Observable<any> {
     return this.http.get(this.getGetAllShowingsUrl());
