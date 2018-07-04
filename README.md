@@ -5,5 +5,6 @@
 4. go to localhost:4200 in browser
 
 # Live Chat Server
-1. node server in the cmd line in the folder
-2. go to localhost:3000 to check
+1. run npm install in chat folder
+2. run node server in the chat folder
+2. go to localhost:3000 in the browser to check
