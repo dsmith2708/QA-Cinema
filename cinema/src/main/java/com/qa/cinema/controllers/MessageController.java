@@ -25,6 +25,8 @@ public class MessageController {
 	
 	@PostMapping
 	public void addMessage(@RequestBody Message message) {
+		java.time.LocalDate.now();
+		message.setPostTime(java.time.LocalDate.now());
 		repo.save(message);
 	}
 	

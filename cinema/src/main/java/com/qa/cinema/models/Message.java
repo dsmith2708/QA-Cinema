@@ -1,6 +1,7 @@
 package com.qa.cinema.models;
 
 import java.sql.Date;
+import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -24,7 +25,7 @@ public class Message {
 	private String messageText;
 	@Column(name = "post_time")
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
-    private Date postTime;
+    private LocalDate postTime;
 	
 	
 	public String getMessageText() {
@@ -33,11 +34,11 @@ public class Message {
 	public void setMessageText(String messageText) {
 		this.messageText = messageText;
 	}
-	public Date getPostTime() {
+	public LocalDate getPostTime() {
 		return postTime;
 	}
-	public void setPostTime(Date postTime) {
-		this.postTime = postTime;
+	public void setPostTime(LocalDate localDate) {
+		this.postTime = localDate;
 	}
 	public long getMessageId() {
 		return id;

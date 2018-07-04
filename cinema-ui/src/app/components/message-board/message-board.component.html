@@ -1,10 +1,11 @@
 <h2> Welcome to the message board! </h2>
 
 <table border="1">
+
   <tr>
   <th> User </th>
   <th> Posted on </th>
-  <th> <th>
+  <th> </th>
   </tr>
 
   <tr *ngFor="let messages of this.messages">
@@ -12,4 +13,21 @@
     <th> {{messages.postTime}} </th>
     <th> {{messages.messageText}} </th>
   <tr>
+
+  <tr>
+    <th> New Message </th>
+  </tr>
+
+  <tr>
+    <th> Enter User Name </th>
+    <th>  </th>
+    <th> Enter Message</th>
+  </tr>
+
+  <tr>
+    <th> <input type="text" [(ngModel)]="this.newMessage.userName" /> </th>
+    <th> {{today | date}} </th>
+    <th> <input type="text" [(ngModel)]="this.newMessage.messageText" /> </th>
+  </tr>
 </table>
+<button (click)="this.saveMessage()"> Save Message </button>
