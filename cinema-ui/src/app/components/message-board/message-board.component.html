@@ -1,3 +1,33 @@
-<p>
-  message-board works!
-</p>
+<h2> Welcome to the message board! </h2>
+
+<table border="1">
+
+  <tr>
+  <th> User </th>
+  <th> Posted on </th>
+  <th> </th>
+  </tr>
+
+  <tr *ngFor="let messages of this.messages">
+    <th> {{messages.userName}} </th>
+    <th> {{messages.postTime}} </th>
+    <th> {{messages.messageText}} </th>
+  <tr>
+
+  <tr>
+    <th (click)="this.addingMessage()"> New Message </th>
+  </tr>
+
+  <tr [hidden]="!addMessageState">
+    <th> Enter User Name </th>
+    <th>  </th>
+    <th> Enter Message</th>
+  </tr>
+
+  <tr [hidden]="!addMessageState">
+    <th> <input type="text" [(ngModel)]="this.newMessage.userName" /> </th>
+    <th> {{today | date}} </th>
+    <th> <input type="text" [(ngModel)]="this.newMessage.messageText" /> </th>
+  </tr>
+</table>
+<button [hidden]="!addMessageState" (click)="this.saveMessage()"> Save Message </button>
