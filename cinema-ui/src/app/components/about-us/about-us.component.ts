@@ -23,8 +23,6 @@ export class AboutUsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log("bacon");
-    console.log(paypal);
   }
 
 }
