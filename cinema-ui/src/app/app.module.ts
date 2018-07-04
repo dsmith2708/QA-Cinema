@@ -33,6 +33,10 @@ import { ScreenService } from './services/screen/screen.service';
 import { FilmService } from './services/film/film.service';
 import { ContactrequestService } from './services/contactrequest/contactrequest.service';
 
+
+
+
+
 const appRoutes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
   {
